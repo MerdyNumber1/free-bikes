@@ -1,4 +1,4 @@
-export interface VehicleDto {
+export interface VehicleDTO {
   bike_id: string;
   lat: number;
   lon: number;

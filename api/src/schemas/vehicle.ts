@@ -1,5 +1,5 @@
 import { getVehicles, getVehicleById } from '../services/vehicleService';
-import { VehicleDto } from '../dto/vehicleDto';
+import { VehicleDTO } from '../models/vehicle';
 
 export const typeDef = `
   extend type Query {
@@ -16,6 +16,6 @@ export const typeDef = `
 `;
 
 export const resolver = {
-  vehicleStatus: (parent: any, args: { id: VehicleDto['bike_id'] }) => getVehicleById(args.id),
+  vehicleStatus: (parent: any, args: { id: VehicleDTO['bike_id'] }) => getVehicleById(args.id),
   vehiclesStatus: getVehicles,
 };
