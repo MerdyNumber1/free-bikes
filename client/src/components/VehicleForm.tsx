@@ -33,9 +33,11 @@ export const VehicleForm: React.VFC<VehicleFormProps> = ({ onSearchSubmit, onRes
       <Button className={classes.button} variant="contained" type="submit">
         Search
       </Button>
-      <IconButton onClick={onClickReset} className={classes.button}>
-        <Clear />
-      </IconButton>
+      {vehicleId && (
+        <IconButton onClick={onClickReset} className={classes.button}>
+          <Clear />
+        </IconButton>
+      )}
     </form>
   );
 };
