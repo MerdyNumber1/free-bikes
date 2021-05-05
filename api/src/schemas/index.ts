@@ -1,13 +1,19 @@
 import { makeExecutableSchema } from 'apollo-server';
-import { typeDef as VehicleStatus } from './vehicle';
+import { typeDef as VehicleStatus, resolver as vehicleResolver } from './vehicle';
 
 const Query = `
   type Query {
-    vehicleStatus(id: Int!): VehicleStatus
+    _empty: String
   }
 `;
 
+const resolvers = {
+  Query: {
+    ...vehicleResolver,
+  },
+};
+
 export const schema = makeExecutableSchema({
   typeDefs: [Query, VehicleStatus],
-  resolvers: {},
+  resolvers,
 });

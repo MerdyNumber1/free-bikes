@@ -34,8 +34,15 @@
     }
   },
   "lint-staged": {
-    "*.(js|ts|tsx)": ["yarn lint:fix", "yarn format:fix", "git add"],
-    "*.json": ["yarn format:fix", "git add -- "]
+    "*.(js|ts|tsx)": [
+      "yarn lint:fix",
+      "yarn format:fix",
+      "git add"
+    ],
+    "*.json": [
+      "yarn format:fix",
+      "git add -- "
+    ]
   },
   "eslintConfig": {
     "extends": [
