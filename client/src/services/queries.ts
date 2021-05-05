@@ -10,3 +10,14 @@ export const VEHICLES = gql`
     }
   }
 `;
+
+export const VEHICLE = gql`
+  query getVehicles($id: String!) {
+    vehicleStatus(id: $id) {
+      bike_id
+      vehicle_type
+      is_reserved
+      is_disabled
+    }
+  }
+`;
