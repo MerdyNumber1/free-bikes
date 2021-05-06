@@ -12,7 +12,7 @@ export const VEHICLES = gql`
 `;
 
 export const VEHICLE = gql`
-  query getVehicles($id: String!) {
+  query getVehicle($id: String!) {
     vehicleStatus(id: $id) {
       bike_id
       vehicle_type
